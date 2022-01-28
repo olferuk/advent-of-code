@@ -16,4 +16,4 @@ Written in Python 3.9.6 and Jupyter Notebooks.
 
 ✅ — the whole task was solved
 
-Total # of stars: **48**/350⭐️.
+Total # of stars: **80**/350⭐️.
