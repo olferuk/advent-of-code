@@ -5,8 +5,7 @@ import numpy as np
 def download_puzzle(day: int, year: int = 2015) -> str:
     headers = {
         "cookie": (
-            "session=53616c7465645f5ff03d703ef925a9ab24f0b63de34f0e158adf5c3daa11fccbd8b42a4ed6fc2b4"
-            "df3642de5f8c3be5e"
+            'session=53616c7465645f5f59ee1a2b43d34f4327c8c09d04478ed9e8acd1782d780899f0d695b78b0f53d303783ae43df6384c'
         )
     }
     response = requests.get(
@@ -23,6 +22,10 @@ def load(day: int) -> str:
 def load_lines(day: int) -> str:
     data = load(day)
     return data.strip().split('\n')
+
+def load_tokens(day: int, sep: str='\n') -> str:
+    data = load(day)
+    return data.strip().split(sep)
 
 def load_array(day: int) -> str:
     data = load(day)
