@@ -1,4 +1,5 @@
-import requests
+from typing import List
+
 import numpy as np
 
 
@@ -7,14 +8,14 @@ def load(day: int) -> str:
         data = f.read()
     return data
 
-def load_lines(day: int) -> str:
+def load_lines(day: int) -> List[str]:
     data = load(day)
     return data.strip().split('\n')
 
-def load_tokens(day: int, sep: str='\n') -> str:
+def load_tokens(day: int, sep: str='\n') -> List[str]:
     data = load(day)
     return data.strip().split(sep)
 
-def load_array(day: int) -> str:
+def load_array(day: int) -> np.ndarray:
     data = load(day)
     return np.array([line.split() for line in data.strip().split('\n')])
